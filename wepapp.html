@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>웹앱프로그래밍</title>
+
+		<body>
+
+			<script>
+				var isColor = [false, false, false];
+
+				function myFunction(a) {
+					isColor[a] = !isColor[a];
+					console.log(isColor[0], isColor[1], isColor[2]);
+					if (a == 0) {
+						document.getElementById("demo").style.color = isColor[a] ? "blue" : "black";
+					} else if (a == 1) {
+						document.getElementById("demo").style.color = isColor[a] ? "red" : "black";
+					} else {
+						document.getElementById("demo").style.color = isColor[a] ? "green" : "black";
+					}
+				}
+
+				function bold() {
+					if(document.getElementById("demo").style.fontWeight =="700"){
+					       document.getElementById("demo").style.fontWeight="initial";}
+					       else{
+					         document.getElementById("demo").style.fontWeight ="700";
+					       
+					       }
+
+				}
+
+				function change() {
+					if (document.getElementById("demo").innerHTML == "hello") {
+						document.getElementById("demo").innerHTML = "Text";
+					} else {
+						document.getElementById("demo").innerHTML = "hello";
+					}
+				}
+
+			</script>
+			<p id="demo">
+				Test
+			</p>
+			<button onclick="myFunction(0)">
+				Blue
+			</button>
+			<button onclick="myFunction(1)">
+				Red
+			</button>
+			<button onclick="myFunction(2)">
+				Green
+			</button>
+
+			<button onclick="bold()">
+				bold
+			</button>
+
+			<button onclick="change()">
+				heo
+			</button>
+
+		</body>
+
+	</head>
+
+</html>

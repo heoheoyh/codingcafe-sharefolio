@@ -1,0 +1,693 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css); /* 일일이 사용자가 설치하지 않기 위해.
+                                                                                                                                한글 폰트인 나눔고딕 폰트를 브라우저에서 받아옴*/
+html, body {
+	margin: 0;
+	padding: 0;
+	max-height:10000px;
+	font-family: consolas;
+}
+
+body {
+
+	margin: 0;
+}
+
+.cont-1200 {
+	width: 1200px;
+	margin: 0 auto;
+} /*컨텐트들이 1200사이즈로 지정되게 하였습니다.*/
+
+.masthead {
+
+	height: 450px;
+	text-align: center;
+	position: relative;
+}
+.backimage {
+	background: url('image/cat_background.jpg') no-repeat 38% 71%;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.4;
+}  /* 헤더에 있는 고양이 백그라운드 사진 지정 */
+
+.one {
+	background-color: #E4D0C1;
+	height: 20px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+} /*헤더bottom에 작은 바 */
+
+.logo1 {
+
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 7.5ex;
+	color: black;
+	position: absolute;
+	top: 70px;
+	left: 20px;
+}/*타이핑 효과로 나타나는 제목*/
+.logo1-2 {
+
+	text-decoration: none;
+	font-size: 5.5ex;
+	font-weight: 700;
+	color: #763F21;
+	position: absolute;
+	top: 130px;
+	left: 260px;
+}/*about에 있는 노트북고양이*/
+
+#catup_hand {
+	position: absolute;
+	right: 25px;
+	bottom: 7px;
+}   /*고양이 손*/
+
+#catup_face {
+	position: absolute;
+	bottom: 8px;
+	right: 25px;
+}/* 네비 위 아래로 쳐다보고 있는 고양이손과 얼굴*/
+nav {
+	background-color: #FAF1DE;
+	height: 50px;
+}
+
+#about { /* 어바웃 영역 스타일 적용*/
+
+	border: none;
+	padding: 15px;
+	font-weight: 700;
+	background-color: #FDFAF7;
+}
+
+.about-height {
+	height: 490px;
+} /* 헤이트 속성을 같기하기 위해 */
+
+.logo2 {
+	background: url('image/logo2.png') no-repeat 0% 100%;
+	background-size: contain;
+	float: left;
+	width: 370px;
+}
+.message {
+	float: left;
+	font-family: 'Nanum Gothic Coding';
+	width: 830px;
+}
+.message h1 {
+	color: #2E2A27;
+	font-size: 2em;
+	border: none;
+	font-family: consolas;
+}
+
+#scroll {  /* 스크롤 시작 */
+
+	font-family: 'Nanum Gothic Coding';
+	text-align: center;
+	padding: 50px 0 0 0;
+}
+#scroll.fixed {   /* 스크롤 영역을 고정시켜주어 보기 편하게 함 */
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	z-index: 10;
+	background-color: white;
+}
+
+.each-cont {
+	position: absolute;
+	width: 1200px;
+	left: 50%;
+	margin-left: -600px;
+}
+
+.word-pos {
+	top: 100px;
+}
+.img-pos {
+	top: 276px;
+}
+/* 각 이미지들과 글자들을 같은 위치에 나타나게함*/
+.s1 {
+	margin: 0 auto;
+	border-radius: 25px;
+	width: 70%;
+	background-color: #FDF2DD;
+	font-size: 1.5em;
+	-skrollr-animation-name: animation2;  /* 스크롤 이름 지정*/
+}
+.s1 h1, p {
+	color: black;
+}
+.s1 h1 {
+	padding-top: 20px;
+	margin-top: 0;
+}
+
+@-skrollr-keyframes animation2 {  /* 각 스크롤 영역에 값을 매겨 이 값이 되는 순간 효과들이 나타나게 함*/
+1070{
+opacity:1;
+top:3%;
+transform:rotate(0deg);transform-origin:0 0;
+}
+
+1350 {
+opacity:0;top:-10%;transform:rotate(-90deg);
+}
+
+}
+
+.s2 {
+	font-size: 1.5em;
+	overflow: hidden;
+	-skrollr-animation-name: animation3;
+}
+.s2 > h1 {
+
+	white-space: nowrap;
+	color: black;
+	-skrollr-animation-name: animation3;
+}
+
+@-skrollr-keyframes animation3 {
+1459 {
+display: none;
+}
+1500{
+display: block;
+width:0px;
+}
+
+1900{
+width:1200px;
+}
+
+2100{
+opacity: 1;
+}
+2600{
+opacity: 0;
+}
+
+}
+.img1 {
+	-skrollr-animation-name: animation4;
+}
+@-skrollr-keyframes animation4{
+1539 {
+display: none;
+}
+1600{
+display: block;
+opacity: 0;
+}
+1900{
+opacity: 1;
+}
+
+2100 {
+opacity: 1;
+}
+2600{
+opacity: 0;
+}
+}
+
+.s3 {
+	font-size: 1.5em;
+	overflow: hidden;
+	-skrollr-animation-name: animation5;
+}
+.s3 > h1 {
+
+	white-space: nowrap;
+	color: black;
+	-skrollr-animation-name: animation5;
+}
+@-skrollr-keyframes animation5{
+2699{
+display: none;
+}
+2800{
+display: block;
+width:0px;
+
+}
+3000{
+width:1200px;
+}
+
+3500{
+opacity: 1;
+}
+3900 {
+opacity: 0;
+}
+
+}
+
+.img2 {
+
+	-skrollr-animation-name: animation6;
+}
+@-skrollr-keyframes animation6{
+2999 {
+display: none;
+}
+3200{
+display: block;
+transform:scale(0) rotate(0deg);
+
+}
+3400{
+transform:scale(1) rotate(1440deg);
+}
+
+3500 {
+opacity: 1;
+}
+3900 {
+opacity: 0;
+}
+
+}
+
+.s4 {
+	font-size: 1.5em;
+	position: absolute;
+	overflow: hidden;
+	-skrollr-animation-name: animation7;
+}
+.s4 > h1 {
+
+	white-space: nowrap;
+	color: black;
+	-skrollr-animation-name: animation7;
+}
+
+@-skrollr-keyframes animation7{
+4199{
+display: none;
+}
+4200{
+display: block;
+width: 0px;
+}
+4400{
+width: 1200px;
+}
+
+4900 {
+opacity: 1;
+}
+5300 {
+opacity: 0;
+}
+
+}
+
+.img3 {
+	-skrollr-animation-name: animation8;
+}@-skrollr-keyframes animation8{
+4499 {
+display: none;
+}
+4500{
+display: block;
+opacity: 0;
+}
+4800{
+opacity: 1;
+}
+4900 {
+opacity: 1;
+}
+5300 {
+opacity: 0;
+}
+}
+
+.s5 {
+	font-size: 1.5em;
+	overflow: hidden;
+	-skrollr-animation-name: animation9;
+}
+.s5 > h1 {
+
+	white-space: nowrap;
+	color: black;
+	-skrollr-animation-name: animation9;
+}@-skrollr-keyframes animation9{
+5399 {
+display: none;
+}
+5400{
+display: block;
+width: 0px;
+}
+5700{
+width: 1200px;
+}
+6300 {
+opacity: 1;
+}
+6500 {
+opacity: 0;
+}
+}
+
+.img4 {
+	-skrollr-animation-name: animation10;
+}
+.img4.each-cont {
+	margin-left: -480px;
+	top: 400px;
+}
+@-skrollr-keyframes animation10{
+5799 {
+display: none;
+}
+5800{
+display: block;
+transform:scale(0) rotate(0deg);
+}
+6100{
+transform:scale(1) rotate(1440deg);
+}
+6300 {
+opacity: 1;
+}
+6500 {
+opacity: 0;
+}
+
+}
+
+.s6 {
+	font-size: 1.5em;
+	overflow: hidden;
+	-skrollr-animation-name: animation11;
+}
+.s6 > h1 {
+
+	white-space: nowrap;
+	color: black;
+	-skrollr-animation-name: animation11;
+}@-skrollr-keyframes animation11{
+6699 {
+display: none;
+}
+6700{
+display: block;
+opacity: 0;
+}
+7000{
+opacity: 1;
+}
+7400 {
+opacity: 1;
+}
+7700 {
+opacity: 0;
+}
+}
+
+.img5 {
+
+	-skrollr-animation-name: animation12;
+}@-skrollr-keyframes animation12{
+6999 {
+display: none;
+}
+7050{
+display: block;
+transform:rotate(0deg);transform-origin:center; opacity:0;
+}
+7300{
+transform:rotate(360deg); opacity:1;
+}
+7400 {
+opacity: 1;
+}
+7700 {
+opacity: 0;
+}
+}
+
+.s7 {
+	font-size: 1.5em;
+	overflow: hidden;
+	-skrollr-animation-name: animation13;
+}
+.s7 > h1 {
+
+	white-space: nowrap;
+	color: black;
+	-skrollr-animation-name: animation13;
+}@-skrollr-keyframes animation13{
+7850 {
+display: none;
+}
+7852{
+display: block;
+opacity: 0;
+}
+8000{
+opacity: 1;
+}
+
+8600 {
+opacity: 1;
+}
+8900 {
+opacity: 0;
+}
+}
+
+.img6 {
+	overflow: hidden;
+	-skrollr-animation-name: animation14;
+}@-skrollr-keyframes animation14{
+8199 {
+display: none;
+}
+8200{
+display: block;
+width: 0px;
+}
+8500{
+width: 1200px;
+}
+8600 {
+opacity: 1;
+}
+8900 {
+opacity: 0;
+}
+
+}
+
+#menu { /* 메뉴 영역 스타일 지정*/
+	background-color: rgb(255, 248, 245);
+	height: 400px;
+	text-align: center;
+	margin-top: 9000px;
+	border-bottom: 1px solid rgb(253, 229, 218);
+}
+.layer-popup { /* 팝업된 레이어 스타일*/
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 10000px;
+	z-index: 10;
+}
+.blurmenu { /* 팝업되기전 이미지*/
+	margin-top: 50px;
+	margin-right: 60%;
+	opacity: 1
+}
+.cbtn:hover { /*호버 하였을시 흐리게 */ 
+	opacity: 0.6;
+}
+.p1 {
+	font-family: 'Nanum Gothic Coding';
+	font-size: 1.2em;
+	font-weight: bolder;
+	position: absolute;
+	margin-top: -200px;
+	left: 40%;
+}
+.p2 {
+	font-family: 'Nanum Gothic Coding';
+	font-size: 1.2em;
+	font-weight: bolder;
+	position: absolute;
+	left: 40%;
+	margin-top: -150px;
+}
+
+.p3 {
+	font-weight: bolder;
+	font-size: 1.5em;
+	position: absolute;
+	left: 55%;
+	margin-top: -50px;
+}
+
+#room { /* 예약영역 스타일 지정*/
+	height: 500px;
+	text-align: center;
+	background-color: rgb(255, 248, 245);
+	padding: 20px;
+}
+
+form { /* 폼태그 스타일 지정*/
+	
+	background:whitesmoke;
+	margin: auto;
+	position: relative;
+	width: 650px;
+	height: 300px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+h2 {
+	color: black;
+}
+
+input[type="text"] {
+	margin-top:7px;
+	padding: 4px;
+	border: solid 3px #c9c9c9;
+	transition: border 0.3s;
+	
+}
+input[type="date"] {
+	margin-top:10px;
+	padding: 4px;
+	border: solid 3px #c9c9c9;
+	transition: border 0.3s;
+}
+input[type="number"] {
+	margin-top:6px;
+	padding: 4px;
+	border: solid 3px #c9c9c9;
+	transition: border 0.3s;
+}
+
+input[type="submit"] {
+
+	width: 100px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	background: #E4D0C1;
+	color: black;
+	height: 30px;
+	border-radius: 15px;
+	border: 1p solid #999;
+}
+
+#end{
+
+height:80px;
+background-color:#C9C9C9;
+padding:0;
+
+}
+
+.mastfoot{
+font-family: 'Nanum Gothic Coding';
+font-size:0.7em;
+text-align:center;
+margin-top: -70px;
+
+
+}
+#move{  /* 쉐어폴리오 이동버튼*/
+ 
+  box-shadow: 4px 4px 3px #333033;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 20px;
+  background: #000000;
+  text-decoration: none;
+  border:1px solid white;
+  margin-top: 8px;
+  margin-left: 87%;
+}
+
+#move:hover {
+ border:4px solid white;
+ margin-top: 8px;
+  margin-left: 87%;
+   padding: 20px;
+}
+
+
+
+nav ul {   
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 1200px;
+}
+nav ul li {
+	font-size: 1.2em;
+	list-style: none;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	width: 300px;
+	text-shadow: 0.5px 0.5px 1px black;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	transition: .3s background-color;
+}
+
+nav a:hover {
+	background-color: #A67B5B;
+}
+
+nav a:active {
+	background-color: #A67B5B;
+	color: #444;
+}
+
+.mastnav.fixed { /* 스크롤 내렸을시 네비가 상단에 fixed되는 클래스 */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+}
+.fixcat { /* 매달리는 고양이도 함께!*/
+	margin: -0.8px;
+	height: auto;
+	width: auto;
+	float: right;
+	position: relative;
+	right: 0;
+}
+

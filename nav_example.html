@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>YH HOMEWORK!</title>
+		<style>
+			html, body {
+				height: 100%;
+				margin: 0 0 2000px;
+			}
+
+			body {
+				margin: 0;
+				background-color: #10ffff;
+			}
+
+			.masthead {
+				background-color: #ff10ff;
+				height: 200px;
+			}
+
+			.mastnav {
+				background-color: #e2e2e2;
+				height: 100px;
+			}
+
+			.title {
+				margin: 0;
+				height: 100px;
+				background-color: #a0a0a0;
+				
+			}
+
+			.fixed {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="masthead">
+			I'm HEADER
+		</header>
+		<nav class="mastnav">
+			I'm NAVIGATION
+		</nav>
+		<h1 class="title">I'm CONTENTS</h1>
+
+		<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				var navTop = $('.mastnav').offset().top;
+
+				var fixNav = function() {
+					var scrollTop = $(window).scrollTop();
+
+					if (scrollTop > navTop) {
+						$('.mastnav').addClass('fixed');
+						var height = $('.mastnav').css('height');
+						$('.title').css('margin-top', height);
+					} else {
+						$('.mastnav').removeClass('fixed');
+						$('.title').css('margin-top', 0);
+					}
+				};
+							
+
+
+				$(window).scroll(function() {
+				fixNav();
+				});
+			});
+
+		</script>
+	</body>
+</html>

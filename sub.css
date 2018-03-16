@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+html, body {
+	height: 100%;
+	font-family: consolas;
+}
+
+body {
+	margin: 0;
+}
+
+.masthead {
+	background-color: black;
+	height: 100px;
+	text-align: center;
+	position: relative;
+}
+.home{
+color:white;
+position:absolute;
+left:13px;
+text-decoration:none;
+font-size:1.8em;
+line-height:25px;
+
+
+}
+
+.layer-popup {
+	display: none;
+	position: absolute;
+	left: 50%;
+	z-index: 10;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 1200px;
+	overflow: hidden;
+}
+nav ul li {
+	float:right;
+	width:130px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size:1.5em;
+	display: block;
+	text-align:center;
+	transition: .3s background-color;
+	text-shadow: 0.5px 0.5px 1px black;
+	line-height: 100px;
+}
+
+nav a:hover {
+	border:5px solid white;
+	border-bottom:7px solid black;
+}
+
+nav a:active {
+	background-color: #FFFFFF;
+	
+}
+
